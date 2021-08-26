@@ -46,6 +46,10 @@ $posts = [
     ],
 ];
 //Stampare ogni data con i relativi post.
-//var_dump($posts);
-print_r($posts);
+for ($i=0; $i < count($posts); $i++) { 
+   echo $posts[$i];
+   
+    // echo  "{$posts[$i]['title']} - {$posts[$i]['author']} - {$posts[$i]['text']}<br/>";
+}
+
 ?>
