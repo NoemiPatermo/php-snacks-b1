@@ -25,11 +25,11 @@ $classe = [
         'voti' => [27,20,29]
     ]
 ];
-foreach ($classe as $key) {
-    echo $key['nome'] . " ";
+foreach ($classe as $key) { //richiamo array e key, ricerco più elemeti dell'array associati a indice
+    echo $key['nome'] . " "; //in un ciclo for sarebbe classe[i]
     echo $key['cognome']." , ";
-    $mediaVoti = array_sum($key['voti'])/count($key['voti']);
-    echo "La media dei voti dello studente è: ". $mediaVoti. "<br/>";
+    $mediaVoti = array_sum($key['voti'])/count($key['voti']);//somma e count per arrivare alla media
+    echo "La media dei voti dello studente è: ". $mediaVoti. "<br/>"; //stsmpa 
 }
 
 ?>
