@@ -25,6 +25,7 @@ $classe = [
         'voti' => [27,20,29]
     ]
 ];
+
 foreach ($classe as $key) { //richiamo array e key, ricerco più elementi dell'array associati a indice
     echo $key['nome'] . " "; //in un ciclo for sarebbe classe[i]
     echo $key['cognome']." , ";
@@ -32,4 +33,17 @@ foreach ($classe as $key) { //richiamo array e key, ricerco più elementi dell'a
     echo "La media dei voti dello studente è: ". $mediaVoti. "<br/>"; //stampa finale
 }
 //per ogni elemento dell'array identificato "as" chiave-valore manda a schermo(echo) chiave e valore
+
+
+
+
+// correzione col ciclo For
+
+/*
+for ($x=0; $x < count($classe) ; $x++) { 
+    $mediaVoti = array_sum($classe[$x]['voti'])/ count($classe[$x]['voti']);
+    $media = round($mediaVoti,2);
+    //stampa
+    echo "La media dei voti dello studente {$classe[$x]['nome']} {$classe[$x]['cognome']} è:   $media<br><hr>";
+}*/
 ?>
