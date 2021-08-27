@@ -46,14 +46,27 @@ $posts = [
     ],
 ];
 //Stampare ogni data con i relativi post.
-
+// LO USI PER CICLARE IN ARRAY CON INDICI NUMERICI  E ANCHE ASSOCIATIVI
 foreach ($posts as $key => $value) {
     echo $key . "<br/>";
-    foreach ($value as $riga ) {
-        echo $riga['title'] . "<br/><hr>";
-        echo $riga['author']. "  ";
-        echo $riga['text'] . "<br/>";
+    foreach ($value as $postDetail ) {
+        echo $postDetail['title'] . "<br/><hr>";
+        echo $postDetail['author']. "  ";
+        echo $postDetail['text'] . "<br/>";
     }
 }
+
+/* CORREZIONE DI OTTAVIO col ciclo FOR
+
+ 1. estrapolare l'array di chiavi (posizionale) dall'array posts
+ 2. cicliamo con il for le chiavi in maniera incrementale 0, 1, 2
+ 3. per ogni step prendiamo i valori che ci servono dall'array originale 
+  per la chiave che io sto ciclando in questo esatto momento
+
+
+$postsKeys = array_keys($postskeys);
+
+
+*/
 
 ?>
