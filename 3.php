@@ -58,15 +58,26 @@ foreach ($posts as $key => $value) {
 
 /* CORREZIONE DI OTTAVIO col ciclo FOR
 
- 1. estrapolare l'array di chiavi (posizionale) dall'array posts
+ 1. estrapolare l'array di chiavi (posizionale) dall'array posts (ovvero le date)
  2. cicliamo con il for le chiavi in maniera incrementale 0, 1, 2
  3. per ogni step prendiamo i valori che ci servono dall'array originale 
   per la chiave che io sto ciclando in questo esatto momento
 
 
-$postsKeys = array_keys($postskeys);
+$postsKeys = array_keys($posts);//torna un array che è una lista posizionale di chiavi
 
-
+for ($x=0; $x < count($postsKeys) ; $x++) { 
+    $originalKey = $postsKeys[$x];
+    echo "{$originalKey}<br>";   //sin qui stampi le chiavi(ovvero le date)
+    
+    for ($i=0; $i < count($posts[$originalKey]) ; $i++) { 
+        $post = $posts[$originalKey][$i];
+        echo "<h2>{$post['title']}</h2>";
+        echo "<p>{$post['text']}</p>";
+        echo "<div>{$post['author']}</div><hr/>";
+    }                             
+}
 */
+
 
 ?>
