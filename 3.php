@@ -46,10 +46,14 @@ $posts = [
     ],
 ];
 //Stampare ogni data con i relativi post.
-for ($i=0; $i < count($posts); $i++) { 
-   echo $posts[$i];
-   
-    // echo  "{$posts[$i]['title']} - {$posts[$i]['author']} - {$posts[$i]['text']}<br/>";
+
+foreach ($posts as $key => $value) {
+    echo $key . "<br/>";
+    foreach ($value as $riga ) {
+        echo $riga['title'] . "<br/><hr>";
+        echo $riga['author']. "  ";
+        echo $riga['text'] . "<br/>";
+    }
 }
 
 ?>
